@@ -9,7 +9,6 @@
         :src="$withBase(data.heroImage)"
         :alt="data.heroAlt || 'hero'"
       >
-
       <h1
         v-if="data.heroText !== null"
         id="main-title"
