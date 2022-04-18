@@ -3,7 +3,7 @@
     class="home"
     :aria-labelledby="data.heroText !== null ? 'main-title' : null"
   >
-    <header class="hero">
+    <div class="hero">
       <img
         v-if="data.heroImage"
         :src="$withBase(data.heroImage)"
@@ -32,7 +32,7 @@
           :item="actionLink"
         />
       </p>
-    </header>
+    </div>
 
     <div
       v-if="data.features && data.features.length"
@@ -48,6 +48,7 @@
       </div>
     </div>
 
+    <FAQ :data="data.FAQ" />
     <Content class="theme-default-content custom" />
 
     <div
@@ -67,11 +68,12 @@
 
 <script>
 import NavLink from '@theme/components/NavLink.vue'
+import FAQ from '@theme/components/FAQ/List.vue'
 
 export default {
   name: 'Home',
 
-  components: { NavLink },
+  components: { NavLink, FAQ },
 
   computed: {
     data () {
