@@ -34,17 +34,13 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
-        link: '/guide/',
+        text: 'Docs',
+        link: '/docs/',
       },
       {
-        text: 'Config',
-        link: '/config/'
+        text: 'features',
+        link: '/features/'
       },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
-      }
     ],
     sidebar: {
       '/guide/': [
