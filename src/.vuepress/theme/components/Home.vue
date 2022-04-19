@@ -49,6 +49,7 @@
     </div>
 
     <div class="faq">
+      <h2>FAQ</h2>
       <v-expansion-panels accordion>
         <v-expansion-panel
           v-for="(item, i) in data.FAQ"
@@ -195,4 +196,6 @@ export default {
 .faq
   max-width 700px
   margin 0 auto
+  > h2
+    text-align center
 </style>
