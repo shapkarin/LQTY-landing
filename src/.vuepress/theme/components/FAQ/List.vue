@@ -35,3 +35,9 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+.FAQ
+  width 500px
+  margin 0 auto
+</style>

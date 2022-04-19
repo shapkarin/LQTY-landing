@@ -43,7 +43,7 @@ module.exports = {
       },
     ],
     sidebar: {
-      '/guide/': [
+      '/docs/': [
         {
           title: 'Guide',
           collapsable: false,

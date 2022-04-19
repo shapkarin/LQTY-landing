@@ -4,7 +4,7 @@ heroImage: https://v1.vuepress.vuejs.org/hero.png
 heroText: Hero text
 tagline:  description text
 actionText: Learn more
-actionLink: /guide/
+actionLink: /docs/
 features:
 - title: Feature 1 Title
   details: Feature 1 Description
