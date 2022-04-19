@@ -39,7 +39,7 @@ module.exports = {
         link: '/docs/',
       },
       {
-        text: 'features',
+        text: 'Features',
         link: '/features/'
       },
     ],
@@ -57,5 +57,5 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
-  ]
+  ],
 }

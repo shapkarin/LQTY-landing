@@ -3,9 +3,9 @@
  *
  * https://v1.vuepress.vuejs.org/guide/basic-config.html#app-level-enhancements
  */
-// import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-// import { library } from '@fontawesome/fontawesome-svg-core';
-// import { fas } from '@fontawesome/fontawesome-svg-icons';
+import Vuetify from "vuetify";
+import "vuetify/dist/vuetify.min.css";
+import "@mdi/font/css/materialdesignicons.css";
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -14,6 +14,6 @@ export default ({
   siteData // site metadata
 }) => {
   // ...apply enhancements for the site.
-  // library.add(fas);
-  // Vue.component('Icon', FontAwesomeIcon);
+  Vue.use(Vuetify);
+  options.vuetify = new Vuetify({})
 }

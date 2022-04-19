@@ -48,14 +48,27 @@
       </div>
     </div>
 
-    <FAQ :data="data.FAQ" />
+    <div class="faq">
+      <v-expansion-panels accordion>
+        <v-expansion-panel
+          v-for="(item, i) in data.FAQ"
+          :key="i"
+        >
+          <v-expansion-panel-header>{{ item.title }}</v-expansion-panel-header>
+          <v-expansion-panel-content>
+            {{ item.details }}
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
+    </div>
+
     <Content class="theme-default-content custom" />
 
     <div
       v-if="data.footer"
       class="footer"
     >
-      {{ data.footer }}
+      <div>© Company name</div>
     </div>
 
     <Content
@@ -68,12 +81,11 @@
 
 <script>
 import NavLink from '@theme/components/NavLink.vue'
-import FAQ from '@theme/components/FAQ/List.vue'
 
 export default {
   name: 'Home',
 
-  components: { NavLink, FAQ },
+  components: { NavLink },
 
   computed: {
     data () {
@@ -179,4 +191,8 @@ export default {
     .feature
       h2
         font-size 1.25rem
+
+.faq
+  max-width 700px
+  margin 0 auto
 </style>
