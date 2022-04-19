@@ -27,6 +27,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
+    // sidebarDepth: 1,
     repo: '',
     editLinks: false,
     docsDir: '',
@@ -44,14 +45,8 @@ module.exports = {
     ],
     sidebar: {
       '/docs/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
-        }
+        ['/docs/', 'Introduction'],
+        'borrowing'
       ],
     }
   },
