@@ -50,7 +50,7 @@
 
     <div class="faq">
       <h2>FAQ</h2>
-      <v-expansion-panels accordion>
+      <v-expansion-panels multiple accordion>
         <v-expansion-panel
           v-for="(item, i) in data.FAQ"
           :key="i"
