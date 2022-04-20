@@ -28,7 +28,7 @@
         </template>
       </Sidebar>
       
-      <v-content>
+      <v-main>
         <Home v-if="$page.frontmatter.home" />
 
         <Page
@@ -42,7 +42,7 @@
             <slot name="page-bottom" />
           </template>
         </Page>
-      </v-content>
+      </v-main>
     </div>
   </v-app>
 </template>

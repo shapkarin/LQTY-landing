@@ -65,7 +65,7 @@
 
     <Content class="theme-default-content custom" />
 
-    <MediumPosts length="3" title="Recent updates" />
+    <MediumPosts :length="3" title="Recent updates" />
 
     <div
       v-if="data.footer"
@@ -197,7 +197,7 @@ export default {
 
 .faq
   max-width 700px
-  margin 120px auto 0
+  margin 100px auto 80px
   > h2
     font-size 58px
     text-align center
