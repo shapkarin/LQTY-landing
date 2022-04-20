@@ -65,6 +65,8 @@
 
     <Content class="theme-default-content custom" />
 
+    <MediumPosts />
+
     <div
       v-if="data.footer"
       class="footer"
@@ -82,11 +84,12 @@
 
 <script>
 import NavLink from '@theme/components/NavLink.vue'
+import MediumPosts from '@theme/components/MediumPosts.vue'
 
 export default {
   name: 'Home',
 
-  components: { NavLink },
+  components: { NavLink, MediumPosts },
 
   computed: {
     data () {
