@@ -47,7 +47,6 @@
         <p>{{ feature.details }}</p>
       </div>
     </div>
-
     <div class="faq">
       <h2>FAQ</h2>
       <v-expansion-panels multiple accordion flat>
@@ -56,17 +55,14 @@
           :key="i"
         >
           <v-expansion-panel-header>{{ item.title }}</v-expansion-panel-header>
-          <v-expansion-panel-content>
+          <v-expansion-panel-content eager>
             {{ item.details }}
           </v-expansion-panel-content>
         </v-expansion-panel>
       </v-expansion-panels>
     </div>
-
     <Content class="theme-default-content custom" />
-
     <MediumPosts :length="3" title="Recent updates" />
-
     <div
       v-if="data.footer"
       class="footer"

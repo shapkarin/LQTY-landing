@@ -9,7 +9,7 @@ lang: en-US
     <h1>Features</h1>
     <span>Some text</span>
   </div>
-  <v-banner two-line>
+  <v-banner two-line class="mb-16">
     <v-avatar
       slot="icon"
       color="deep-purple accent-4"
@@ -23,7 +23,7 @@ lang: en-US
     </v-avatar>
     Three line text string example with two actions. One to two lines is preferable. Three lines should be considered the maximum string length on desktop in order to keep messages short and actionable.
   </v-banner>
-  <v-card class="mt-20">
+  <v-card>
     <v-tabs
       v-model="tab"
       align-with-title
@@ -40,6 +40,7 @@ lang: en-US
       <v-tab-item
         v-for="item in items"
         :key="item"
+        eager
       >
         <v-card flat>
           <v-card-text v-text="text"></v-card-text>

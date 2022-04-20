@@ -4,7 +4,7 @@ module.exports = {
   /**
     Meta tags for the main page
   */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'Landing',
   description: description,
 
   /**
