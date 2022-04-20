@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="mt-10">Recent updates</h2>
+    <h2 class="mt-10">{{ title }}</h2>
     <v-container fluid grid-list-md>
       <v-layout row wrap>
         <v-flex 
@@ -34,6 +34,17 @@ export default {
       posts: []
     }
   },
+  
+  props: {
+    length: {
+      required: true,
+      type: Number,
+    },
+    title: {
+      required: true,
+      type: String,
+    }
+  },
 
   mounted() {
     this.getPosts();
@@ -44,8 +55,7 @@ export default {
       const tag = 'aeternity'; // change to other tag
       const url = `https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Ftag%2F${tag}`;
       let { items } = await (await fetch(url)).json();
-      items = items.filter(({ author }) => author === 'æternity');
-      console.log(items)
+      items = items.filter(({ author }) => author === 'æternity').slice(0, this.length);
       this.posts = items;
     },
   }

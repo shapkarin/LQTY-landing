@@ -65,7 +65,7 @@
 
     <Content class="theme-default-content custom" />
 
-    <MediumPosts />
+    <MediumPosts length="3" title="Recent updates" />
 
     <div
       v-if="data.footer"
@@ -84,12 +84,11 @@
 
 <script>
 import NavLink from '@theme/components/NavLink.vue'
-import MediumPosts from '@theme/components/MediumPosts.vue'
 
 export default {
   name: 'Home',
 
-  components: { NavLink, MediumPosts },
+  components: { NavLink },
 
   computed: {
     data () {

@@ -1,0 +1,1 @@
+<MediumPosts :length="10" title="Blog posts" />

@@ -42,6 +42,10 @@ module.exports = {
         text: 'Features',
         link: '/features/'
       },
+      {
+        text: 'Blog',
+        link: '/blog/'
+      }
     ],
     sidebar: {
       '/docs/': [
