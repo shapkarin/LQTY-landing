@@ -1,13 +1,33 @@
 <template>
   <div>
-    <h2>Recent updates</h2>
-   
+    <h2 class="mt-10">Recent updates</h2>
+    <v-container fluid grid-list-md>
+      <v-layout row wrap>
+        <v-flex 
+          v-for="(post, index) in posts"
+          :key="index"
+          d-flex xs12 sm6 md4
+        >
+          <v-card
+            :href="post.link"
+            target="_blank"
+          >
+            <v-img
+              height="250"
+              :src="post.thumbnail"
+            ></v-img>
+            <v-card-title class="hide-text">{{ post.title }}</v-card-title>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </div>
 </template>
 
 <script>
+// todo: add grid
 export default {
-  name: 'DropdownTransition',
+  name: 'MediumPosts',
 
   data () {
     return {
@@ -21,19 +41,23 @@ export default {
 
   methods: {
     async getPosts () {
-      // https://medium.com/tag/aeternity-lqty/latest
-      const tag = 'aeternity';
+      const tag = 'aeternity'; // change to other tag
       const url = `https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Ftag%2F${tag}`;
       let { items } = await (await fetch(url)).json();
       items = items.filter(({ author }) => author === 'æternity');
-      this.data = items;
+      console.log(items)
+      this.posts = items;
     },
   }
 }
 </script>
 
-<style lang="stylus">
-.dropdown-enter, .dropdown-leave-to
-  height 0 !important
-
+<style lang="stylus" scoped>
+.hide-text {
+  width: 257px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
 </style>
