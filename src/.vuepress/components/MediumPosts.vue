@@ -25,7 +25,6 @@
 </template>
 
 <script>
-// todo: add grid
 export default {
   name: 'MediumPosts',
 
@@ -46,7 +45,7 @@ export default {
     }
   },
 
-  mounted() {
+  beforeMount() {
     this.getPosts();
   },
 
