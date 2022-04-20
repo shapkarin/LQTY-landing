@@ -2,12 +2,9 @@ const { description } = require('../../package')
 
 module.exports = {
   /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#title
-   */
+    Meta tags for the main page
+  */
   title: 'Vuepress Docs Boilerplate',
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#description
-   */
   description: description,
 
   /**
