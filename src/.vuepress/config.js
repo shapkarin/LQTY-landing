@@ -1,6 +1,8 @@
 const { description } = require('../../package')
 
 module.exports = {
+  // change after move from https://username.github.io/LQTY-landing/
+  base: '/LQTY-landing/',
   /**
     Meta tags for the main page
   */
