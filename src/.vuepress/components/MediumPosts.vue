@@ -63,13 +63,18 @@ export default {
   white-space nowrap
   overflow hidden !important
   text-overflow ellipsis
+
 .grid
   display flex
   
+  @media (max-width: 800px)
+    flex-direction column
+
   .item
+    display block
     max-width 240px
     margin-right 34px
-    
+
     .title
       font-size 20px
       max-width 240px
