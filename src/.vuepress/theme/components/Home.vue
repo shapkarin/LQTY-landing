@@ -22,7 +22,7 @@
         v-if="data.actionText && data.actionLink"
         class="action"
       >
-        <MailcampForm />
+        <MailchimpForm />
       </p>
     </div>
 
@@ -77,7 +77,7 @@ export default {
 <style lang="stylus" socped>
 /* TODO: remove !important */
 .home .hero h1
-  margin 4rem auto 1.8rem !important
+  margin 3.7rem auto 1.8rem !important
 
 .home .hero img
   max-width 450px!important
@@ -107,7 +107,7 @@ export default {
   .features
     border-top 1px solid $borderColor
     padding 1.2rem 0
-    margin-top 2.5rem
+    margin-top 2.8rem
     display flex
     flex-wrap wrap
     align-items flex-start
