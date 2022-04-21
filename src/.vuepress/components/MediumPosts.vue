@@ -8,11 +8,13 @@
         :href="post.link"
         target="_blank"
       >
-        <img
-          height="250"
-          :src="post.thumbnail"
-          class="blog-grid-item-image"
-        />
+        <div class="crop">
+          <img
+            height="250"
+            :src="post.thumbnail"
+            class="blog-grid-item-image"
+          />
+        </div>
         <h2 class="title">{{ post.title }}</h2>
       </a>
     </div>
@@ -66,14 +68,21 @@ export default {
 
 .grid
   display flex
+  flex-wrap wrap
+  flex-direction row
+  align-items auto
+  align-content start
+  justify-content space-between
+
   
-  @media (max-width: 800px)
+  @media (max-width 800px)
     flex-direction column
 
   .item
     display block
-    max-width 240px
-    margin-right 34px
+    margin-bottom 1.2rem
+    flex 0 1 32%
+    border 1px solid #eaecef
 
     .title
       font-size 20px
@@ -84,11 +93,20 @@ export default {
       white-space nowrap
       overflow hidden !important
       text-overflow ellipsis
+      color #745ddf
+      padding 0.5rem 0.3rem
 
     .blog-grid-item-image
       width 100%
       height auto
+  
+    @media (min-width 800px)
+      .crop
+        height 135px
+        overflow hidden
+
   .title
     display block
     border-bottom none
+
 </style>

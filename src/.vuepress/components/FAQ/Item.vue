@@ -42,7 +42,7 @@ export default {
 
 .icon
   margin-left auto
-  width 18px
+  width 1.2rem
 
 .iconActive
   transform rotate(45deg)
