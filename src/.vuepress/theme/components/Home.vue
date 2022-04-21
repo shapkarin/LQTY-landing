@@ -148,9 +148,6 @@ export default {
         margin 1.2rem auto
       .description
         font-size 1.2rem
-      .action-button
-        font-size 1rem
-        padding 0.6rem 1.2rem
     .feature
       h2
         font-size 1.25rem
