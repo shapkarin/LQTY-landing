@@ -93,17 +93,18 @@ export default {
       white-space nowrap
       overflow hidden !important
       text-overflow ellipsis
-      color #745ddf
+      color $accentColor
       padding 0.5rem 0.3rem
 
     .blog-grid-item-image
       width 100%
       height auto
-  
-    @media (min-width 800px)
-      .crop
-        height 135px
-        overflow hidden
+
+    .crop
+      border-bottom 1px solid #eaecef
+      @media (min-width 800px)
+          height 135px
+          overflow hidden
 
   .title
     display block

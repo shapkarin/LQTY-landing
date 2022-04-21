@@ -50,8 +50,10 @@ export default {
       font-size 1.1em
       line-height 1.7
       font-weight bold
-    & > li:not(:first-child)
-      margin-top .75rem
+      &.active
+        background #e5e5e5
+        border-left-color #999999
+        color #2c3e50
 
 @media (max-width: $MQMobile)
   .sidebar
