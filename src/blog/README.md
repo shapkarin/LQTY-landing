@@ -4,6 +4,6 @@ description: Blog
 lang: en-US
 ---
 
-<temaplte>
+<template>
   <MediumPosts :length="10" title="Blog posts" />
-</temaplte>
+</template>
