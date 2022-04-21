@@ -1,11 +1,13 @@
 <template>
   <form class="form">
     <input type="email" class="input" v-model="email" required />
-    <button class="action-button" @click="send">
+    <button class="action-button" @click="send" type="submit">
       Subscribe
     </button>
   </form>
 </template>
+
+
 <script>
 export default {
   data() {
@@ -14,15 +16,20 @@ export default {
     }
   },
   methods: {
-    async send() {
-      const url = 'https://aeternity.us15.list-manage.com/subscribe/post-json?u=83a504836fa768f10619d053c&amp;id=c2d8c3ba71'
+    async send(e) {
+      e.preventDefault();
+      const url = 'https://aeternity.us15.list-manage.com/subscribe/post-json?u=83a504836fa768f10619d053c&amp;id=c2d8c3ba71';
       const response = await (await fetch(url, {
         method: 'POST',
+        mode: 'no-cors',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json; charset=utf-8',
         },
-        body: JSON.stringify({ EMAIL: this.email, subscribe: 'Subscribe' })
+        body: JSON.stringify({
+          EMAIL: this.email,
+          subscribe: 'Subscribe',
+        }),
       })).json();
     }
   }
