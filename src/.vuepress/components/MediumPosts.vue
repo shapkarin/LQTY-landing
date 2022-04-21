@@ -49,7 +49,7 @@ export default {
       const tag = 'aeternity'; // change to other tag
       const url = `https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Ftag%2F${tag}`;
       let { items } = await (await fetch(url)).json();
-      items = items.filter(({ author }) => author === 'æternity').slice(0, this.length);
+      // items = items.filter(({ author }) => author === 'æternity').slice(0, this.length);
       this.posts = items;
     },
   }

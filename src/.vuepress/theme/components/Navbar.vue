@@ -23,18 +23,12 @@
 
       <NavLinks class="can-hide" />
 
-      <div
-        class="links"
-        :style="linksWrapMaxWidth ? {
-          'max-width': linksWrapMaxWidth + 'px'
-        } : {}"
-      >
-        <AlgoliaSearchBox
-          v-if="isAlgoliaSearch"
-          :options="algolia"
-        />
-        <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
-      </div>
+      
+      <AlgoliaSearchBox
+        v-if="isAlgoliaSearch"
+        :options="algolia"
+      />
+      <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
     </div>
   </header>
 </template>
@@ -121,9 +115,10 @@ $navbar-horizontal-padding = 1.5rem
     white-space nowrap
     font-size 0.9rem
     display flex
-    .search-box
-      flex: 0 0 auto
-      vertical-align top
+  .search-box
+    flex: 0 0 auto
+    vertical-align top
+    margin-left auto
 
 @media (max-width: $MQMobile)
   .navbar
