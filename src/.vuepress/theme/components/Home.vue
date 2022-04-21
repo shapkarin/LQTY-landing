@@ -88,6 +88,13 @@ export default {
 </script>
 
 <style lang="stylus">
+/* TODO: remove !important */
+.home .hero h1
+  margin 4rem auto 1.8rem !important
+
+.home .hero img
+  max-width 450px!important
+
 .home
   padding $navbarHeight 2rem 0
   max-width $homePageWidth

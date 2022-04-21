@@ -9,45 +9,45 @@ lang: en-US
     <h1>Features</h1>
     <span>Some text</span>
   </div>
-  <v-banner two-line class="mb-16">
-    <v-avatar
+  <div class="banner">
+    <div
       slot="icon"
       color="deep-purple accent-4"
       size="40"
     >
-      <v-icon
+      <div
         color="white"
       >
         mdi-lock
-      </v-icon>
-    </v-avatar>
+      </div>
+    </div>
     Three line text string example with two actions. One to two lines is preferable. Three lines should be considered the maximum string length on desktop in order to keep messages short and actionable.
-  </v-banner>
-  <v-card>
-    <v-tabs
+  </div>
+  <div>
+    <div
       v-model="tab"
       align-with-title
     >
-      <v-tabs-slider color="blue"></v-tabs-slider>
-      <v-tab
+      <div color="blue"></div>
+      <div
         v-for="item in items"
         :key="item"
       >
         {{ item }}
-      </v-tab>
-    </v-tabs>
-    <v-tabs-items v-model="tab">
-      <v-tab-item
+      </div>
+    </div>
+    <div v-model="tab">
+      <div
         v-for="item in items"
         :key="item"
         eager
       >
-        <v-card flat>
-          <v-card-text v-text="text"></v-card-text>
-        </v-card>
-      </v-tab-item>
-    </v-tabs-items>
-  </v-card>
+        <div flat>
+          <div v-text="text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </template>
 
@@ -63,4 +63,27 @@ lang: en-US
       }
     },
   }
+</script>
+
+<style lang="stylus" scoped>
+.features-hero
+  display flex
+  width auto
+  height auto
+  margin-top 220px
+  margin-bottom 104px
+  flex-direction column
+  text-align center
+
+  h1
+    font-size 71px
+
+.banner
+  display flex
+  padding-top 60px
+  border-top 1px solid #b6b6b6
+  border-bottom 1px solid #b6b6b6
+  justify-content center
+  align-self center
+
 </script>
