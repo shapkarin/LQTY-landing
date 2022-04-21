@@ -40,6 +40,11 @@
         <slot name="page-bottom" />
       </template>
     </Page>
+
+    <div class="footer">
+      <div>© Company name</div>
+    </div>
+
   </div>
 </template>
 

@@ -32,3 +32,6 @@ FAQ:
 - title: Et molestie
   details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed viverra tellus in hac habitasse platea dictumst vestibulum. Velit egestas dui id ornare arcu odio.
 ---
+::: slot footer
+© Company name
+:::

@@ -90,4 +90,5 @@ export default {
       height auto
   .title
     display block
+    border-bottom none
 </style>

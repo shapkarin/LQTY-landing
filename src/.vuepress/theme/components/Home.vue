@@ -49,18 +49,6 @@
 
     <MediumPosts :length="3" title="Recent updates" />
 
-    <div
-      v-if="data.footer"
-      class="footer"
-    >
-      <div>© Company name</div>
-    </div>
-
-    <Content
-      v-else
-      slot-key="footer"
-      class="footer"
-    />
   </main>
 </template>
 
@@ -87,7 +75,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" socped>
 /* TODO: remove !important */
 .home .hero h1
   margin 4rem auto 1.8rem !important
@@ -149,11 +137,6 @@ export default {
       color lighten($textColor, 10%)
     p
       color lighten($textColor, 25%)
-  .footer
-    padding 2.5rem
-    border-top 1px solid $borderColor
-    text-align center
-    color lighten($textColor, 25%)
 
 @media (max-width: $MQMobile)
   .home
