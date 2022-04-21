@@ -984,30 +984,6 @@
   dependencies:
     postcss-value-parser "^4.2.0"
 
-"@fortawesome/fontawesome-common-types@6.1.1":
-  version "6.1.1"
-  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.1.1.tgz"
-  integrity sha512-wVn5WJPirFTnzN6tR95abCx+ocH+3IFLXAgyavnf9hUmN0CfWoDjPT/BAWsUVwSlYYVBeCLJxaqi7ZGe4uSjBA==
-
-"@fortawesome/fontawesome-svg-core@^6.1.1":
-  version "6.1.1"
-  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-6.1.1.tgz"
-  integrity sha512-NCg0w2YIp81f4V6cMGD9iomfsIj7GWrqmsa0ZsPh59G7PKiGN1KymZNxmF00ssuAlo/VZmpK6xazsGOwzKYUMg==
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "6.1.1"
-
-"@fortawesome/free-solid-svg-icons@^6.1.1":
-  version "6.1.1"
-  resolved "https://registry.npmjs.org/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-6.1.1.tgz"
-  integrity sha512-0/5exxavOhI/D4Ovm2r3vxNojGZioPwmFrKg0ZUH69Q68uFhFPs6+dhAToh6VEQBntxPRYPuT5Cg1tpNa9JUPg==
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "6.1.1"
-
-"@fortawesome/vue-fontawesome@^2.0.6":
-  version "2.0.6"
-  resolved "https://registry.npmjs.org/@fortawesome/vue-fontawesome/-/vue-fontawesome-2.0.6.tgz"
-  integrity sha512-V3vT3flY15AKbUS31aZOP12awQI3aAzkr2B1KnqcHLmwrmy51DW3pwyBczKdypV8QxBZ8U68Hl2XxK2nudTxpg==
-
 "@jridgewell/resolve-uri@^3.0.3":
   version "3.0.5"
   resolved "https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.0.5.tgz"
@@ -1025,11 +1001,6 @@
   dependencies:
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
-
-"@mdi/font@^6.6.96":
-  version "6.6.96"
-  resolved "https://registry.npmjs.org/@mdi/font/-/font-6.6.96.tgz"
-  integrity sha512-FbcvG9z17hwZ7IwX5XeOR1UYGoLq+gTKq6XNPvJFuCpn599GdiPCJbAmmDBJb+jMYXjKYr0lCxfouWGxDA82sA==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -2632,7 +2603,7 @@ commander@2.17.x:
   resolved "https://registry.npmjs.org/commander/-/commander-2.17.1.tgz"
   integrity sha512-wPMUt6FnH2yzG95SA6mzjQOEKUU3aLaDEmzs1ti+1E9h+CsrZghRlqEM/EJ4KscsQVG8uNN4uVreUeT8+drlgg==
 
-commander@^2.20.0:
+commander@^2.17.1, commander@^2.20.0:
   version "2.20.3"
   resolved "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
@@ -5349,6 +5320,13 @@ loglevel@^1.6.8:
   resolved "https://registry.npmjs.org/loglevel/-/loglevel-1.8.0.tgz"
   integrity sha512-G6A/nJLRgWOuuwdNuA6koovfEV1YpqqAG4pRUlFaz3jj2QNZ8M4vBqnVA+HBTmU/AMNUtlOsMmSpF6NyOjztbA==
 
+lorem-ipsum@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/lorem-ipsum/-/lorem-ipsum-2.0.4.tgz#5feedb37a14e9cb96c3e994d4a2edd4cb0c299db"
+  integrity sha512-TD+ERYfxjYiUfOyaKU6OH4euumNVeKoo3BxIhokb7bGmoCULsME48onF9NVxYK3CU1z9L5ALnkDkW8lIkHvMNQ==
+  dependencies:
+    commander "^2.17.1"
+
 lower-case@^1.1.1:
   version "1.1.4"
   resolved "https://registry.npmjs.org/lower-case/-/lower-case-1.1.4.tgz"
@@ -7196,6 +7174,11 @@ requires-port@^1.0.0:
   resolved "https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
 
+reset-css@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/reset-css/-/reset-css-5.0.1.tgz#1ced0604fdb6836567e40d82de3537afaf3bb4c8"
+  integrity sha512-VyuJdNFfp5x/W6e5wauJM59C02Vs0P22sxzZGhQMPaqu/NGTeFxlBFOOw3eq9vQd19gIDdZp7zi89ylyKOJ33Q==
+
 resolve-cwd@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/resolve-cwd/-/resolve-cwd-2.0.0.tgz"
@@ -8464,11 +8447,6 @@ vuepress@^1.5.3:
     envinfo "^7.2.0"
     opencollective-postinstall "^2.0.2"
     update-notifier "^4.0.0"
-
-vuetify@^2.6.4:
-  version "2.6.4"
-  resolved "https://registry.npmjs.org/vuetify/-/vuetify-2.6.4.tgz"
-  integrity sha512-2wEzU/Gz39gQCxK93xoiWPKCHQUnyUKWd81wB7Q7hfYJWu5QOWQXYlF0X/BgUZzf8IOyHWKiSNEAfEe9OE3b4w==
 
 watchpack-chokidar2@^2.0.1:
   version "2.0.1"
