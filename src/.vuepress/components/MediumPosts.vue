@@ -1,17 +1,21 @@
 <template>
   <div>
     <h2 class="mt-10">{{ title }}</h2>
-    <a
-      v-for="(post, index) in posts"
-      :href="post.link"
-      target="_blank"
-    >
-      <img
-        height="250"
-        :src="post.thumbnail"
-      />
-      <h2 class="hide-text">{{ post.title }}</h2>
-    </a>
+    <div class="grid">
+      <a
+        class="item"
+        v-for="(post, index) in posts"
+        :href="post.link"
+        target="_blank"
+      >
+        <img
+          height="250"
+          :src="post.thumbnail"
+          class="blog-grid-item-image"
+        />
+        <h2 class="title">{{ post.title }}</h2>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -53,11 +57,32 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.hide-text {
-  width: 257px;
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden !important;
-  text-overflow: ellipsis;
-}
+.hide-text 
+  width 257px
+  display inline-block
+  white-space nowrap
+  overflow hidden !important
+  text-overflow ellipsis
+.grid
+  display flex
+  
+  .item
+    max-width 240px
+    margin-right 34px
+    
+    .title
+      font-size 20px
+      max-width 240px
+      padding 0
+      margin 0
+      display block
+      white-space nowrap
+      overflow hidden !important
+      text-overflow ellipsis
+
+    .blog-grid-item-image
+      width 100%
+      height auto
+  .title
+    display block
 </style>
