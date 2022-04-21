@@ -43,18 +43,7 @@
       </div>
     </div>
     <div class="faq">
-      <h2>FAQ</h2>
-      <v-expansion-panels multiple accordion flat>
-        <v-expansion-panel
-          v-for="(item, i) in data.FAQ"
-          :key="i"
-        >
-          <v-expansion-panel-header>{{ item.title }}</v-expansion-panel-header>
-          <v-expansion-panel-content eager>
-            {{ item.details }}
-          </v-expansion-panel-content>
-        </v-expansion-panel>
-      </v-expansion-panels>
+      <FAQ :data="data.FAQ" />
     </div>
     <Content class="theme-default-content custom" />
     <MediumPosts :length="3" title="Recent updates" />

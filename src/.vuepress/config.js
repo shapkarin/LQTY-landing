@@ -62,10 +62,4 @@ module.exports = {
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
   ],
-  // todo: should work with stylus
-  // postcss: {
-  //   plugins: [
-  //     require('autoprefixer')
-  //   ]
-  // }
 }

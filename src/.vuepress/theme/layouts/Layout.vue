@@ -1,50 +1,46 @@
 <template>
-  <v-app>
+  <div
+    class="theme-container"
+    :class="pageClasses"
+    @touchstart="onTouchStart"
+    @touchend="onTouchEnd"
+  >
+    <Navbar
+      v-if="shouldShowNavbar"
+      @toggle-sidebar="toggleSidebar"
+    />
+
     <div
-      class="theme-container"
-      :class="pageClasses"
-      @touchstart="onTouchStart"
-      @touchend="onTouchEnd"
+      class="sidebar-mask"
+      @click="toggleSidebar(false)"
+    />
+
+    <Sidebar
+      :items="sidebarItems"
+      @toggle-sidebar="toggleSidebar"
     >
-      <Navbar
-        v-if="shouldShowNavbar"
-        @toggle-sidebar="toggleSidebar"
-      />
+      <template #top>
+        <slot name="sidebar-top" />
+      </template>
+      <template #bottom>
+        <slot name="sidebar-bottom" />
+      </template>
+    </Sidebar>
+    
+    <Home v-if="$page.frontmatter.home" />
 
-      <div
-        class="sidebar-mask"
-        @click="toggleSidebar(false)"
-      />
-
-      <Sidebar
-        :items="sidebarItems"
-        @toggle-sidebar="toggleSidebar"
-      >
-        <template #top>
-          <slot name="sidebar-top" />
-        </template>
-        <template #bottom>
-          <slot name="sidebar-bottom" />
-        </template>
-      </Sidebar>
-      
-      <v-main>
-        <Home v-if="$page.frontmatter.home" />
-
-        <Page
-          v-else
-          :sidebar-items="sidebarItems"
-        >
-          <template #top>
-            <slot name="page-top" />
-          </template>
-          <template #bottom>
-            <slot name="page-bottom" />
-          </template>
-        </Page>
-      </v-main>
-    </div>
-  </v-app>
+    <Page
+      v-else
+      :sidebar-items="sidebarItems"
+    >
+      <template #top>
+        <slot name="page-top" />
+      </template>
+      <template #bottom>
+        <slot name="page-bottom" />
+      </template>
+    </Page>
+  </div>
 </template>
 
 <script>
