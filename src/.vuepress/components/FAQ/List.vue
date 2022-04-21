@@ -1,6 +1,6 @@
 <template>
-  <div class="FAQ">
-    <h2>{{title}}</h2>
+  <div class="faq">
+    <h2 class="title">{{title}}</h2>
     <Item v-for="(item, i) in data" :key="'faq_' + i" :item="item" />
   </div>
 </template>
@@ -33,3 +33,14 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+.faq
+  max-width 38rem
+  margin 4rem auto
+
+  .title
+    font-size 2.4rem
+    margin-bottom 1.2rem
+    text-align center
+</style>

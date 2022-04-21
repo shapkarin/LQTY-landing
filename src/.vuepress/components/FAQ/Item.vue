@@ -4,7 +4,7 @@
       {{item.title}}
       <div v-bind:class="{ iconActive: isOpen, icon: true }">+</div>
     </div>
-    <div v-show="isOpen">{{item.details}}</div>
+    <div v-show="isOpen" class="details">{{item.details}}</div>
   </div>
 </template>
 
@@ -32,12 +32,19 @@ export default {
 
 <style lang="stylus" scoped>
 .title
-  font-size 27px;
-  cursor pointer
-  border-bottom 1px solid gray
+  font-size 1.4rem
+  border-bottom 1px solid #b9b9b9
   display flex
+  cursor pointer
+  margin 0 0 0.8rem 0
+  padding-bottom 0.3rem
+
 .icon
   margin-left auto
+
 .iconActive
   transform rotate(45deg)
+
+.details
+  margin-bottom 1rem
 </style>

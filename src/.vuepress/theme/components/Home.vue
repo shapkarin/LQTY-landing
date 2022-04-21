@@ -42,11 +42,13 @@
         <p>{{ feature.details }}</p>
       </div>
     </div>
-    <div class="faq">
-      <FAQ :data="data.FAQ" />
-    </div>
+
+    <FAQ :data="data.FAQ" />
+
     <Content class="theme-default-content custom" />
+
     <MediumPosts :length="3" title="Recent updates" />
+
     <div
       v-if="data.footer"
       class="footer"
@@ -174,11 +176,4 @@ export default {
     .feature
       h2
         font-size 1.25rem
-
-.faq
-  max-width 700px
-  margin 100px auto 80px
-  > h2
-    font-size 58px
-    text-align center
 </style>
