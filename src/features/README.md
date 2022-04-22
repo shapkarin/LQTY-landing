@@ -120,4 +120,21 @@ export default {
 
     > article > h3
       margin 0 0 0.5rem
+
+/* todo: remove !important, maybe mobile first */
+@media (max-width: $MQMobile)
+  .tabs
+    flex-direction column
+  .tabs-links
+    width 100% !important
+    display flex !important
+    justify-content space-between
+  .tabs-link
+    color transparent !important
+    width 1rem
+    height 1rem
+    background-color gray
+    &.active
+      background-color $textColor !important
+      border-left none !important
 </style>
