@@ -128,13 +128,15 @@ export default {
   .tabs-links
     width 100% !important
     display flex !important
-    justify-content space-between
   .tabs-link
     color transparent !important
-    width 1rem
-    height 1rem
-    background-color gray
+    width 1.2rem
+    height 1.2rem
+    padding 0 !important
+    background-color $accentColor
+    margin-right 1rem !important
+    border-radius 50%
+    border-left none !important
     &.active
-      background-color $textColor !important
-      border-left none !important
+      background-color #f5264eb3 !important
 </style>
