@@ -4,7 +4,6 @@ heroImage: https://v1.vuepress.vuejs.org/hero.png
 heroText: Lorem ipsum dolor
 tagline: Sed viverra tellus in hac habitasse platea dictumst vestibulum. Velit egestas dui id ornare arcu odio.
 actionText: Documentation
-actionLink: /docs/
 features:
 - title: Velit egestas dui
   details: Felis bibendum ut tristique et egestas quis ipsum. Ut morbi tincidunt augue interdum. Sed pulvinar proin gravida hendrerit. Quis enim lobortis.

@@ -3,30 +3,9 @@
     class="home"
     :aria-labelledby="data.heroText !== null ? 'main-title' : null"
   >
-    <div class="hero">
-      <h1
-        v-if="data.heroText !== null"
-        id="main-title"
-      >
-        {{ data.heroText || $title || 'Hello' }}
-      </h1>
-
-      <p
-        v-if="data.tagline !== null"
-        class="description"
-      >
-        {{ data.tagline || $description || 'Welcome to your VuePress site' }}
-      </p>
-
-      <p
-        v-if="data.actionText && data.actionLink"
-        class="action"
-      >
-        <MailchimpForm />
-      </p>
-    </div>
-
-    
+    <Hero :title="data.heroText" :description="data.tagline" >
+      <MailchimpForm />
+    </Hero>
 
     <div
       v-if="data.features && data.features.length"
@@ -76,34 +55,12 @@ export default {
 
 <style lang="stylus" socped>
 /* TODO: remove !important */
-.home .hero h1
-  margin 3.7rem auto 1.8rem !important
-
-.home .hero img
-  max-width 450px!important
-
 .home
   padding $navbarHeight 2rem 0
   max-width $homePageWidth
   margin 0px auto
   display block
-  .hero
-    text-align center
-    img
-      max-width: 100%
-      max-height 280px
-      display block
-      margin 3rem auto 1.5rem
-    h1
-      font-size 3rem
-    h1, .description, .action
-      margin 1.8rem auto
-    .description
-      max-width 35rem
-      font-size 1.6rem
-      line-height 1.3
-      color lighten($textColor, 40%)
-    
+
   .features
     border-top 1px solid $borderColor
     padding 1.2rem 0

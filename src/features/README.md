@@ -4,69 +4,33 @@ description: Features
 lang: en-US
 ---
 <template>
-<div>
-  <div class="features-hero">
-    <h1>Features</h1>
-    <span>Some text</span>
+  <div class="home">
+    <Hero title="Lorem ipsum dolor" description="Nulla felis nunc, commodo ut condimentum non, hendrerit eu elit." >
+      <NavLink
+        class="promo-button"
+        :item="{
+          link: '/docs/',
+          text: 'Documentation',
+          rel: 'canonical'
+        }"
+      />
+    </Hero>
   </div>
-  <div class="banner">
-    <div
-      slot="icon"
-      color="deep-purple accent-4"
-      size="40"
-    >
-      <div
-        color="white"
-      >
-        mdi-lock
-      </div>
-    </div>
-    Three line text string example with two actions. One to two lines is preferable. Three lines should be considered the maximum string length on desktop in order to keep messages short and actionable.
-  </div>
-  <div>
-    <div
-      v-model="tab"
-      align-with-title
-    >
-      <div color="blue"></div>
-      <div
-        v-for="item in items"
-        :key="item"
-      >
-        {{ item }}
-      </div>
-    </div>
-    <div v-model="tab">
-      <div
-        v-for="item in items"
-        :key="item"
-        eager
-      >
-        <div flat>
-          <div v-text="text"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        tab: null,
-        items: [
-          'Feature1', 'Feature2', 'Feature3', 'Feature4', 'Feature5',
-        ],
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      }
-    },
+import NavLink from '@theme/components/NavLink.vue';
+
+export default {
+  components: {
+    NavLink
   }
+}
 </script>
 
-<style lang="stylus" scoped>
-.features-hero
+<style scoped>
+/* todo: styles does not work in vuepress .md file  */
+.features-hero 
   display flex
   width auto
   height auto
@@ -86,4 +50,6 @@ lang: en-US
   justify-content center
   align-self center
 
+.padding
+  padding $navbarHeight 2rem 0
 </script>

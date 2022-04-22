@@ -39,4 +39,25 @@ input
   background-color transparent
   -webkit-box-shadow none
   -moz-box-shadow none
-  box-shadow none  
+  box-shadow none
+
+
+.promo-button
+  display inline-block
+  font-size 1.2rem
+  color #fff
+  background-color $accentColor
+  padding 0.8rem 1.6rem
+  border-radius 8px
+  transition background-color .1s ease
+  box-sizing border-box
+  border-bottom 1px solid darken($accentColor, 10%)
+  outline none
+  border-top none
+  border-right none
+  border-left none
+  cursor pointer
+
+  &:hover
+    background-color lighten($accentColor, 10%)
+    text-decoration none !important
