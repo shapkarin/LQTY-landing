@@ -23,8 +23,6 @@
 
     <FAQ :data="data.FAQ" />
 
-    <Content class="theme-default-content custom" />
-
     <MediumPosts :length="3" title="Recent updates" />
 
   </main>
@@ -64,12 +62,13 @@ export default {
   .features
     border-top 1px solid $borderColor
     padding 1.2rem 0
-    margin-top 2.8rem
+    margin-top 5rem
     display flex
     flex-wrap wrap
     align-items flex-start
     align-content stretch
     justify-content space-between
+
   .feature
     flex-grow 1
     flex-basis 30%

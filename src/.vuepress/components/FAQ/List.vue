@@ -37,7 +37,7 @@ export default {
 <style lang="stylus" scoped>
 .faq
   max-width 38rem
-  margin 1.5rem auto 4rem
+  margin 1.5rem auto 7rem
 
   .title
     font-size 2rem

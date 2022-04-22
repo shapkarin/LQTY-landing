@@ -3,6 +3,7 @@
     <h1
       v-if="title !== null"
       id="main-title"
+      class="title"
     >
       {{ title }}
     </h1>

@@ -4,7 +4,7 @@ description: Features
 lang: en-US
 ---
 <template>
-  <div class="padding">
+  <div class="feature-page-intro">
     <Hero title="Lorem ipsum dolor" description="Nulla felis nunc, commodo ut condimentum non, hendrerit eu elit." >
       <NavLink
         class="promo-button"
@@ -20,7 +20,7 @@ lang: en-US
       Duis malesuada malesuada
     </h2>
     <div>
-      Morbi viverra congue libero, eget ultricies odio congue eget. Ut vitae urna sit amet purus congue sollicitudin molestie vel lectus. Quisque accumsan ante sit amet commodo sagittis. Cras tempor lorem a gravida elementum.
+      Mauris imperdiet justo vitae maximus venenatis. In hac habitasse platea dictumst. Aliquam erat nibh, imperdiet eu aliquam in, faucibus quis ex. Mauris aliquam ornare mi, non viverra nibh lacinia id. Nulla luctus mi eget diam venenatis, vel pulvinar purus pharetra. Nam accumsan malesuada elementum.
     </div>
   </div>
   </div>
@@ -36,7 +36,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" socped>
+<style lang="stylus" scoped>
 .banner
   display flex
   flex-direction column
@@ -45,6 +45,6 @@ export default {
   margin 6rem 0
   padding-bottom 2rem
 
-.padding
+.feature-page-intro
   padding $navbarHeight 2rem 0
 </style>

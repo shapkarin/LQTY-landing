@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="mt-10">{{ title }}</h2>
+    <h2>{{ title }}</h2>
     <div class="grid">
       <a
         class="item"
