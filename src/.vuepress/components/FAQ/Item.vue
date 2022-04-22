@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <div @click="toggle" class="title">
+  <section>
+    <h3 @click="toggle" class="title">
       {{item.title}}
       <img :src="$withBase('/plus.svg')" v-bind:class="{ iconActive: isOpen, icon: true }"/>
-    </div>
-    <div v-show="isOpen" class="details">{{item.details}}</div>
-  </div>
+    </h3>
+    <article v-show="isOpen" class="details">{{item.details}}</article>
+  </section>
 </template>
 
 <script>
@@ -39,6 +39,10 @@ export default {
   padding-top 1.2rem
   padding-bottom 1.4rem
   user-select none
+  line-height 1rem
+  font-weight 300
+  line-height 1
+  margin 0
 
 .icon
   margin-left auto
@@ -49,5 +53,4 @@ export default {
 
 .details
   margin 1rem 0
-
 </style>
