@@ -4,7 +4,7 @@ description: Features
 lang: en-US
 ---
 <template>
-  <div class="home">
+  <div class="padding">
     <Hero title="Lorem ipsum dolor" description="Nulla felis nunc, commodo ut condimentum non, hendrerit eu elit." >
       <NavLink
         class="promo-button"
@@ -15,6 +15,14 @@ lang: en-US
         }"
       />
     </Hero>
+  <div class="banner">
+    <h2>
+      Duis malesuada malesuada
+    </h2>
+    <div>
+      Morbi viverra congue libero, eget ultricies odio congue eget. Ut vitae urna sit amet purus congue sollicitudin molestie vel lectus. Quisque accumsan ante sit amet commodo sagittis. Cras tempor lorem a gravida elementum.
+    </div>
+  </div>
   </div>
 </template>
 
@@ -28,28 +36,15 @@ export default {
 }
 </script>
 
-<style scoped>
-/* todo: styles does not work in vuepress .md file  */
-.features-hero 
-  display flex
-  width auto
-  height auto
-  margin-top 220px
-  margin-bottom 104px
-  flex-direction column
-  text-align center
-
-  h1
-    font-size 71px
-
+<style lang="stylus" socped>
 .banner
   display flex
-  padding-top 60px
-  border-top 1px solid #b6b6b6
-  border-bottom 1px solid #b6b6b6
+  flex-direction column
   justify-content center
   align-self center
+  margin 6rem 0
+  padding-bottom 2rem
 
 .padding
   padding $navbarHeight 2rem 0
-</script>
+</style>
