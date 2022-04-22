@@ -42,7 +42,7 @@
     </Page>
 
     <div class="footer">
-      <div>© Company name</div>
+      <div>© Æternity</div>
     </div>
 
   </div>

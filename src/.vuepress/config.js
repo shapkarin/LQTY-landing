@@ -6,7 +6,7 @@ module.exports = {
   /**
     Meta tags for the main page
   */
-  title: 'Landing',
+  title: 'lqty',
   description: description,
 
   /**
@@ -33,6 +33,7 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
+    logo: 'aeternity-logo.svg',
     nav: [
       {
         text: 'Docs',

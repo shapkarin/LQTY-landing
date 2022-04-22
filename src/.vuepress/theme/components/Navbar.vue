@@ -13,12 +13,6 @@
           :src="$withBase($site.themeConfig.logo)"
           :alt="$siteTitle"
         >
-        <span
-          v-if="$siteTitle"
-          ref="siteName"
-          class="site-name"
-          :class="{ 'can-hide': $site.themeConfig.logo }"
-        >{{ $siteTitle }}</span>
       </RouterLink>
 
       <NavLinks class="can-hide" />
@@ -99,10 +93,9 @@ $navbar-horizontal-padding = 1.5rem
   a, span, img
     display inline-block
   .logo
-    height $navbarHeight - 1.4rem
-    min-width $navbarHeight - 1.4rem
+    width 8.4rem
     margin-right 1.8rem
-    vertical-align top
+    vertical-align middle
   .site-name
     font-size 1.3rem
     font-weight 600
