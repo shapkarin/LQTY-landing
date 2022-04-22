@@ -36,7 +36,7 @@ export default {
   border-bottom 1px solid #b9b9b9
   display flex
   cursor pointer
-  margin 0 0 1.2rem 0
+  padding-top 1.2rem
   padding-bottom 1.4rem
   user-select none
 
@@ -48,5 +48,6 @@ export default {
   transform rotate(45deg)
 
 .details
-  margin-bottom 2rem
+  margin 1rem 0
+
 </style>
