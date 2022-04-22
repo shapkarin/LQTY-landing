@@ -33,7 +33,7 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
-    logo: 'aeternity-logo.svg',
+    logo: '/aeternity-logo.svg',
     nav: [
       {
         text: 'Docs',
