@@ -27,11 +27,11 @@ lang: en-US
       <h2>Suspendisse ultrices</h2>
       <section class="tabs">
         <section class="tabs-links">
-          <a href="#lorem" class="tabs-link" @click="selectTab">Lorem ipsum dolor</a>
-          <a href="#fusce" class="tabs-link" @click="selectTab">Fusce lacinia nisl</a>
-          <a href="#quisque" class="tabs-link" @click="selectTab">Quisque dui</a>
-          <a href="#nisi" class="tabs-link" @click="selectTab">Fusce et nisi</a>
-          <a href="#aliquam" class="tabs-link" @click="selectTab">Aliquam sit</a>
+          <a href="#lorem" :class="{ 'tabs-link': true, active: tab === 'lorem' }" @click="selectTab">Lorem ipsum dolor</a>
+          <a href="#fusce" :class="{ 'tabs-link': true, active: tab === 'fusce' }" @click="selectTab">Fusce lacinia nisl</a>
+          <a href="#quisque" :class="{ 'tabs-link': true, active: tab === 'quisque' }" @click="selectTab">Quisque dui</a>
+          <a href="#nisi" :class="{ 'tabs-link': true, active: tab === 'nisi' }" @click="selectTab">Fusce et nisi</a>
+          <a href="#aliquam" :class="{ 'tabs-link': true, active: tab === 'aliquam' }" @click="selectTab">Aliquam sit</a>
         </section>
         <section class="tabs-content">
           <article id="lorem" v-show="tab === 'lorem'">
@@ -103,11 +103,21 @@ export default {
 
   .tabs-link
     display block
+    color $textColor
+    border-left 2px solid transparent
+    padding 0 0.3rem
     margin-bottom 1rem
+
+    &:hover
+      text-decoration none
+      color $accentColor
+    
+    &.active
+      border-left 2px solid $textColor
 
   .tabs-content
     width 80%
 
     > article > h3
-      margin 0 0 1rem
+      margin 0 0 0.5rem
 </style>
